@@ -1,0 +1,101 @@
+{% extends 'fusionartfair/base.html' %}
+{% load static %} <!-- Load static files -->
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+<!-- Header Start -->
+
+<!-- Header End -->
+
+<!-- Contact Start -->
+
+
+
+<div class="banner-section-contact pt-5 pb-5 bg-primary">
+    <div class="container-fluid px-md-5 mb-0">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left"> </div>
+            <div class="col-lg-6 text-center">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-md-5 mb-0">
+
+</div>
+
+
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5">
+                <span class="px-2">Connect with Us!</span>
+            </p>
+            <h1 class="mb-4">Contact Us For Any Query</h1>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 " data-aos="fade-up" data-aos-duration="2000">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    <form name="contactForm" id="contactForm" method="post">
+                        {% csrf_token %}
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
+                                required="required" data-validation-required-message="Please enter your name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
+                                required="required" data-validation-required-message="Please enter your email" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
+                                required="required" data-validation-required-message="Please enter a subject" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control" rows="6" id="message" name="message" placeholder="Message"
+                                required="required"
+                                data-validation-required-message="Please enter your message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="consentCheckbox"
+                                name="consent">
+                            <label class="form-check-label" for="consentCheckbox">
+                                I hereby agree that this data will be stored and processed for the purpose of
+                                establishing contact.
+                                I am aware that I can revoke my consent at any time.
+                            </label>
+
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-sm px-4 mx-auto my-2"
+                                id="sendMessageButton">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 mb-5 " data-aos="fade-up" data-aos-duration="2000">
+                <img class="w-100" src="{% static 'img/contact-us.jpg' %}" alt="contact-us">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+
+{% endblock %}

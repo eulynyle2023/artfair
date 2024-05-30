@@ -1,0 +1,269 @@
+.img-fluid.w-100 {
+width: 1000px;
+height: 500px; /* Maintain aspect ratio */
+}
+
+
+.p-home {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #0F2D49;
+    text-align: justify;
+    font-family: Monserrat;
+  }
+
+
+
+  .p-about {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #0F2D49;
+    text-align: justify;
+    font-family: sans-serif;
+    margin-right: 10px;
+  }
+
+
+.h4-about{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #0F2D49;
+    text-align: center;
+    font-family: sans-serif;
+    margin-right: 10px;
+}
+.p-apply {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #0F2D49;
+  text-align: center;
+  font-family: sans-serif;
+  /* margin-right: 10px; */
+}
+
+  .img-buy {
+    width: 250px; /* Set width to container's width */
+    height: 100px; /* Set height as needed */
+    border: 1px solid #0F2D49; /* Add or modify border */
+    object-fit: cover;  /* Adjust object-fit as needed */
+    border-radius: 20px;
+    
+    
+  }
+
+
+.img-bannerhome {
+  width: 100%; /* Set width to 100% for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Resize image to fit container */
+  border: 1px solid #0F2D49; /* Add or modify border */
+  border-radius: 20px;
+}
+
+
+.img-fluid-harrow {
+
+    max-width: 650px;
+
+    max-height: 450px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    padding-top: 20px;
+    image-rendering: optimizeQuality;
+    /* display: flex; */
+    
+  }
+
+  .img-fluid-visit {
+    width: auto;
+    height: 150px;
+    border-radius: 100px;
+    image-rendering: optimizeQuality;
+    
+  }
+   
+
+.img-fluid-jo {
+  width: auto;
+  height: 300px;
+  padding-top:100px;
+  padding-left: 20px;
+  padding-right: 40px;
+  border-radius: 200px;
+  image-rendering: optimizeQuality;
+  
+}
+
+
+ 
+.banner-section-about:before,
+.banner-section-visit:before,
+.banner-section-contact:before   {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: #ffffff; */
+ 
+  top: 0;
+  height: 500px;  /* Adjust height as needed */
+  overflow: hidden;  /* Optional to hide overflowing content */
+  
+}
+
+  .banner-section-about {
+    position: relative;
+    background-image: url("../img/about.jpg");
+    background-size: cover;  /* Resize image to fit container */
+    background-position: top;  /* Center the image horizontally */
+    height: 500px;  /* Set a height for the banner section */
+    /* background-position: 0px 350px; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 calc(100% - 50px));  */
+    /* top: 0px; */
+    /* left: 0px; */
+    width: 100%;
+    padding-right: 50px;
+    z-index: 100;
+  }
+
+  @media (max-width: 768px) {
+    .banner-section-about {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 50px;
+      top: 100px;
+
+    }
+  }
+
+
+
+  .banner-section-yorkshire{
+    position: relative;
+    background-image: url("../img/yorkshiregrounds.png");
+    background-size: cover;  /* Resize image to fit container */
+    background-position: center;  /* Center the image horizontally */
+    height: 700px;  /* Set a height for the banner section */
+    background-position: 0 50px;
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 calc(100% - 50px));  */
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+  }
+
+
+
+  .banner-section-visit {
+    position: relative;
+    background-image: url("../img/visit.jpg");
+    background-size: cover;  /* Resize image to fit container */
+    background-position: center;  /* Center the image horizontally */
+    height: 700px;  /* Set a height for the banner section */
+    background-position: 0 50px;
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 calc(100% - 50px));  */
+    top: 50;
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+  }
+
+
+  .banner-section-contact {
+    position: relative;
+    background-image: url("../img/contact.jpg");
+    background-size: cover;  /* Resize image to fit container */
+    background-position: center;  /* Center the image horizontally */
+    height: 700px;  /* Set a height for the banner section */
+    background-position: 0 50px;
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 calc(100% - 50px));  */
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+  }
+
+  .text-content {
+    padding-top: 80px; /* Adjust padding as needed */
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center */
+  }
+
+
+.shadow-box {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 20px; /* Optional rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; 
+  /* max-width: 700px; */
+  /* margin: 0 auto;  */
+}
+
+@media screen and (max-width: 768px) { /* Adjust max-width as needed */
+  .shadow-box {
+    display: flex; /* Show the shadow box on smaller screens */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; 
+  }
+  .text-content {
+    display: flex; /* Show the shadow box on smaller screens */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; 
+  
+  
+  }
+
+  .img-fluid-harrow {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    max-width: 300px;
+  }
+}
+
+
+  .transparent-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional rounded corners */
+    display: flex; /* Make it a flexbox container */
+    flex-wrap: wrap; /* Allow text to wrap on smaller screens */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
+/* Increase specificity (optional) */
+.custom-file-upload {
+  padding: 50px;
+  text-align: center; /* Center the content within the area */
+  border: 2px dashed #dbeef5; /* Example dashed border */
+  cursor: pointer; /* Indicate draggable area on hover */
+  background-color: #dbeef5; /* Example background color */
+}
+
+.custom-file-upload span {
+  display: block; /* Display the message on a new line */
+  /* Adjust margin-top for desired spacing above the image */
+  margin-top: 10px; /* Example margin for the message */
+}
+
+/* Consider adding styles for the preview image (optional) */
+.upload-preview img {
+  /* Set width and height as needed */
+  width: 100%; /* Example: Fill the width of the upload area */
+  /* Adjust other styles (e.g., margin, padding) for desired layout */
+}
+

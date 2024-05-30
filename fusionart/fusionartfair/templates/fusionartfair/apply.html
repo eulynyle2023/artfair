@@ -1,0 +1,206 @@
+{% extends 'fusionartfair/base.html' %}
+{% load static %} <!-- Load static files -->
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+<!-- Header Start -->
+<!-- Header End -->
+
+<!-- Contact Start -->
+
+<div class="banner-section-contact pt-5 pb-5 bg-primary">
+    <div class="container-fluid px-md-5 mb-0">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left"> </div>
+            <div class="col-lg-6 text-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-md-5 mb-0">
+</div>
+
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <h1 class="mb-4">Apply to Exhibit</h1>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-duration="2000">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    <form name="ApplyForm" id="ApplyForm" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="first_name" name="first_name"
+                                placeholder="Your First Name" required="required"
+                                data-validation-required-message="Please enter your first name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="sur_name" name="sur_name"
+                                placeholder="Your Surname Name" required="required"
+                                data-validation-required-message="Please enter your surname" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="ex_name" name="ex_name"
+                                placeholder="Exhibitor Name" required="required"
+                                data-validation-required-message="Please enter the Exhibitor Name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="text-lg-left pb-2">
+                        </div>
+                        <div class="text-lg-center pb-2 data-aos=" fade-up" data-aos-duration="2000"">
+                            <h5 class=" mb-2 mt-4">Personal Details</h5>
+                            <p class="p-apply">The following details are for office use only and will not be used on
+                                your listing:</p>
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
+                                required="required" data-validation-required-message="Please enter your email" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control" id="confirm_email" name="confirm_email"
+                                placeholder="Confirm Your Email" required="required"
+                                data-validation-required-message="Please enter your email" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Your Phone"
+                                required="required"
+                                data-validation-required-message="Please enter your mobile phone number" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control" id="address" name="address" placeholder="Your Address"
+                                required="required"
+                                data-validation-required-message="Please enter your full address"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="text-lg-center mt-4 pb-2 data-aos=" fade-up" data-aos-duration="2000"">
+                            <h5 class=" mb-2 mt-4">Social Media Details</h5>
+                            <p class="p-apply">The following details are for promotions once your listing is successful:
+                            </p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="web_address" name="web_address"
+                                placeholder="Please enter your Website address (optional)"
+                                data-validation-required-message="Please enter your Website Address" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="fb_address" name="fb_address"
+                                placeholder="Please enter your Facebook address (optional)"
+                                data-validation-required-message="Please enter your FB Address" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="insta_address" name="insta_address"
+                                placeholder="Please enter your Instagram handle (optional)"
+                                data-validation-required-message="Please enter your Instagram Handle" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control" rows="6" id="desc_work" name="desc_work"
+                                placeholder="Description of your Work (250 words)" required="required"
+                                data-validation-required-message="Please enter the description of your work."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="text-lg-left pb-2">
+                        </div>
+                        <div class="text-lg-center pb-2 data-aos=" fade-up" data-aos-duration="2000"">
+                            <h5 class=" mb-2 mt-4">Exemplar Artwork</h5>
+                            <p class="p-apply">Please provide 3 examples of artworks you would like to show at
+                                FusionArtFair</p>
+                        </div>
+
+                        <!-- Image Upload Box 1 -->
+                        <div class="control-group photo-upload text-lg-center mb-3">
+                            <label for="photoUpload1" class="form-label">Artwork 1</label>
+                            <div class="custom-file-upload border rounded" id="uploadArea1">
+                                <span>Drag & Drop Image Here (or Click to Browse)</span>
+                                <input type="file" class="form-control" id="photoUpload1" name="photoUpload1"
+                                    accept="image/*" hidden>
+                                <div class="upload-preview" id="uploadPreview1"></div>
+                            </div>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <!-- Image Upload Box 2 -->
+                        <div class="control-group photo-upload text-lg-center mb-3">
+                            <label for="photoUpload2" class="form-label">Artwork 2</label>
+                            <div class="custom-file-upload border rounded" id="uploadArea2">
+                                <span>Drag & Drop Image Here (or Click to Browse)</span>
+                                <input type="file" class="form-control" id="photoUpload2" name="photoUpload2"
+                                    accept="image/*" hidden>
+                                <div class="upload-preview" id="uploadPreview2"></div>
+                            </div>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <!-- Image Upload Box 3 -->
+                        <div class="control-group photo-upload text-lg-center mb-3">
+                            <label for="photoUpload3" class="form-label">Artwork 3</label>
+                            <div class="custom-file-upload border rounded" id="uploadArea3">
+                                <span>Drag & Drop Image Here (or Click to Browse)</span>
+                                <input type="file" class="form-control" id="photoUpload3" name="photoUpload3"
+                                    accept="image/*" hidden>
+                                <div class="upload-preview" id="uploadPreview3"></div>
+                            </div>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-check mt-4">
+                            <strong>IMPORTANT:</strong>
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value=1 id="dataConsent"
+                                    name="dataConsent" required>
+                                I consent to FusionArtFair using and storing my data solely
+                                for the purpose of managing and promoting the event. I understand
+                                that FusionArtFair takes data protection seriously and will never
+                                share my information without my permission. For more details,
+                                please visit the privacy policy.
+                            </label>
+                        </div>
+                        <div class="form-check mt-4">
+
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value=1 id="mailingList"
+                                    name="mailingList">
+                                Add me to the Mailing List.
+                            </label>
+                        </div>
+
+
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-sm px-4 mx-auto my-2"
+                                id="sendMessageButton">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 mb-5" data-aos="fade-up" data-aos-duration="2000">
+                <img class="w-100" src="{% static 'img/contact-us.jpg' %}" alt="contact-us">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/app.js' %}"></script>
+
+<!-- Contact End -->
+{% endblock %}

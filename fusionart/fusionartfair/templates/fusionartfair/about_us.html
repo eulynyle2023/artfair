@@ -1,0 +1,116 @@
+{% extends 'fusionartfair/base.html' %}
+{% load static %} <!-- Load static files -->
+
+{% block title %}
+About Us
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+<!-- About section Start -->
+
+<div class="banner-section-about pt-5 pb-5 bg-primary">
+    <div class="container-fluid px-md-5 mb-0">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left"> </div>
+            <div class="col-lg-6 text-center">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-12 mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="2000">
+
+
+                <p class="p-home">
+                    Founded with a vision to bridge the gap between artists and their audience, we recognise a need for
+                    a
+                    platform where artists can showcase their incredible talents and also provide a space for meaningful
+                    connections and
+                    conversation with art collectors and enthusiasts.
+                </p>
+                <p class="p-home">
+                    With a deep appreciation for the arts and a commitment to supporting artist in their creative
+                    journey, we believe that art has the power to
+                    transcend boundaries and to bring people together,
+                    and it is this belief that guides everything we do as art fair organiser.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid pt-5">
+    <div class="container pb-3">
+        <div class="text-center pb-2" data-aos="fade-up" data-aos-duration="2000">
+            <p class="section-title px-5">
+                <span class="px-2">Meet the Founder of Fusion Art Fair</span>
+            </p>
+            <h1 class="mb-4">Joanne Chon</h1>
+        </div>
+        <div class="row">
+
+
+            <div class="col-lg-12 mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="2000">
+                <div class="shadow-box">
+                    <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+                    <div class="pl-4">
+                        <h4 class="h4-about">Step into the Fusion Art Fair and meet the visionary behind the scenes</h4>
+                        <p class="p-about">Driven by a deep-seated passion for art and a desire to provide a platform
+                            for artists to showcase their talent,
+                            Joanne decided to take matters into her own hands and launch Fusion Art Fair. Her aim was
+                            clear: to curate an event that not
+                            only showcases the diverse talents of artist but also facilitates connection between artists
+                            and potential buyers.
+                        </p>
+                        <p class="p-about">
+
+                            Joanne brings a wealth of experience to the table. Having served as a fair director for a
+                            reputable art fair based in London,
+                            she possesses a deep understanding of the intricate dynamics of the art world. Her tenure in
+                            this role has afforded her
+                            invaluable insights into the inner workings of the art world and developed an understanding
+                            of the support and aspirations
+                            of both artists and art buyers.
+
+
+                        </p>
+                        <p class="p-about">
+
+
+                            In addition to her role in art fair direction, Joanne also boasts a rich background in the
+                            exhibition world,
+                            where she has honed her skills in event planning and execution. Drawing upon this diverse
+                            expertise, she saw an
+                            opportunity to create something truly remarkable—a space where artists could connect with
+                            buyers and collectors.
+
+                            Join us as we celebrate the passion and dedication of Joanne. Welcome to Fusion Art Fair
+                            where the magic of art comes to life.
+                        </p>
+
+
+
+                    </div>
+                    <img class="img-fluid-jo" src="{% static 'img/jo.png' %}" alt="Home Harrogate fair" />
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- About section End -->
+{% endblock %}

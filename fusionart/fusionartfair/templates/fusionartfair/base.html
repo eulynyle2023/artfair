@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FusionArtFair</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}" />
+
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light position-relative shadow pt-10">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-0 px-lg-5 fixed-top">
+            <a href="/" class="navbar-brand d-flex align-items-center">
+                <img src="{% static 'img/logoprim.jpg' %}" alt="FusionArtFair Logo" class="fusion-logo">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="container-fluid pt-5">
+                <div class="container">
+
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav font-weight-bold mx-auto py-0">
+                            <a href="/" class="nav-item nav-link">Home</a>
+                            <a href="/about/" class="nav-item nav-link">About Us</a>
+                            <a href="/visit/" class="nav-item nav-link">Visit</a>
+                            <a href="/apply/" class="nav-item nav-link">Apply to exhibit</a>
+                            <a href="/contact/" class="nav-item nav-link">Contact Us</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </nav>
+    </div>
+
+
+    <div class="navbar-bottom-padding py-5"></div>
+
+
+    <!-- Navbar End -->
+    {% if messages %}
+    <div style="text-align: center;">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}"> <!-- Show the warning message -->
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- CCBF90 -->
+    <div class="banner-section-footer pt-0 pb-5">
+        <div class="container-fluid px-md-5 mb-0">
+            <div class="row align-items-center px-3">
+                <div class="col-lg-6 mx-auto text-center text-lg-left">
+                    <div class="col-lg-12 mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="welcome-text-container text-center py-3 d-flex flex-column justify-content-center">
+
+                            <p class="p-home text-white mt-0 "> Be the first to know! Sign up for regular
+                                emails
+                                with the latest event updates, inspiring articles, and exclusive ticket offers for
+                                upcoming shows.</p>
+
+                            <a href="{% url 'contact_us' %}"><button type="submit"
+                                    class="btn img-mail btn-sm px-4 my-2">Join Our
+                                    Mailing
+                                    List</button></a>
+
+                            <p class="p-home text-white mt-1 mb-0"> We value your privacy. Your data is
+                                never
+                                shared,
+                                and you can always manage your preferences or unsubscribe.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-0 py-4 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-3">
+                <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+                    style="font-size: 40px; line-height: 40px">
+                    <i class="flaticon-043-teddy-bear"></i>
+                    <span class="text-primary">Social Media</span>
+                </a>
+                <div class="d-flex">
+                    <h4 class="fab fa-instagram text-primary"></h4>
+                    <div class="pl-3">
+                        <a href="https://www.instagram.com/fusionartfair/" target="_blank">
+                            <h5 class="text-primary"> FusionArtFair</h5>
+                        </a>
+                        <p class="p-footer"></p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fab fa-facebook-f text-primary"></h4>
+                    <div class="pl-3">
+                        <a href="https://www.facebook.com/fusionartfair" target="_blank">
+                            <h5 class="text-primary"> FusionArtFair</h5>
+                        </a>
+                        <p class="p-footer"></p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fab fa-twitter text-primary"></h4>
+                    <div class="pl-3">
+                        <a href="https://x.com/fusionartfair" target="_blank">
+                            <h5 class="text-primary"> FusionArtFair</h5>
+                        </a>
+                        <p class="p-footer"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h3 class="text-primary mb-4">Get In Touch</h3>
+                <div class="d-flex">
+                    <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-primary">Address</h5>
+                        <p class="p-footer">Omnia One, 125 Queen Street, Sheffield S1 2DU</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-envelope text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-primary">Email</h5>
+                        <p class="p-footer">info@fusionartfair.com</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-phone-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-primary">Phone</h5>
+                        <p class="p-footer">07922222448</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h3 class="text-primary mb-4">Quick Links</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-primary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-primary mb-2" href="/about/"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-primary mb-2" href="/apply/"><i class="fa fa-angle-right mr-2"></i>Apply to
+                        Exhibit</a>
+                    <a class="text-primary mb-2" href="/contact/"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-primary mb-2" href="/terms/"><i class="fa fa-angle-right mr-2"></i>Terms and
+                        Conditions</a>
+                    <a class="text-primary mb-2" href="/privacy/"><i class="fa fa-angle-right mr-2"></i>Privacy
+                        Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pt-4" style="border-top: 1px solid rgba(2, 28, 77, 0.2) ;">
+            <p class="m-0 text-center text-primary p-footer">
+                &copy;
+                All rights reserved.
+                <a class="text-primary font-weight-bold" href="#">Fusion Art Fair @2024</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

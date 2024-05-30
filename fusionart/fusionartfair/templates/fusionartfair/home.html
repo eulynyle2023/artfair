@@ -1,0 +1,127 @@
+{% extends 'fusionartfair/base.html' %}
+{% load static %}
+
+{% block title %}
+FusionArtFair Home
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<div class="banner-section pt-5 pb-5 bg-primary">
+  <div class="container-fluid px-md-5 mb-0">
+    <div class="row align-items-center px-3">
+      <div class="col-lg-6 text-center text-lg-left"> </div>
+      <div class="col-lg-6 text-center">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid pt-5">
+  <div class="container">
+
+
+  </div>
+</div>
+<div class="container-fluid pt-5">
+  <div class="container">
+    <div class="text-center pb-2">
+      <div class="welcome-text-container text-center py-3">
+        <h1>Welcome to Fusion Art Fair!</h1>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="1000">
+        <p class="p-home">
+          A destination for immersive experiences where artists, art collectors, and enthusiasts convene.
+          Browse and buy art from nearly 100 established and emerging artists and galleries from around the UK at the
+          inaugural Harrogate Art Fair.
+          Whether you're seeking to expand your art collection, find the perfect statement piece, or simply engage with
+          new artistic talents.
+          Our fair offers a welcoming environment for all.
+
+
+        </p>
+
+        <p class="p-home">
+
+          Join us for a weekend at <strong>Fusion Art Fair- Harrogate</strong> for an experience of discovering new art
+          talents, engaging with fellow art enthusiasts,
+          and building connections with artists from around the UK.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center pb-2" data-aos="fade-up" data-aos-duration="2000">
+  <p class="section-title px-5">
+    <span class="px-2">Come Visit!</span>
+  </p>
+
+</div>
+<div></div>
+
+<div class="text-center pb-2" data-aos="fade-up" data-aos-duration="2000">
+
+  <div class="row align-items-center">
+
+    <!-- <div class="col-lg-7" data-aos="fade-up" data-aos-duration="2000">
+    <div class="d-flex bg-light shadow border-top rounded mb-4"
+      style="justify-content: center; align-items: center; align-content: center">
+      <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+      <img class="img-fluid-harrow mr-4" src="{% static 'img/Harrogate.jpg' %}" alt="Home Harrogate fair" />
+      <div class="col-lg-7 d-flex flex-column align-items-center">
+        <h3>Our first ever Art Fair at Harrogate in March 2025!</h3>
+        <p class="p-home">Venue : Great Yorkshire Showground, Harrogate, HG2 8NZ </p>
+        <p class="p-home">Date: 7th -9th March 2025 </p>
+        <a><button type="submit" class="btn btn-primary btn-sm px-4 my-2">Buy Tickets</button></a>
+      </div>
+
+    </div>
+
+  </div>
+</div> -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="1000">
+            <!-- <div class="col-md-7 d-flex justify-content-center align-items-center"> -->
+            <div class="shadow-box">
+              <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+              <img class="img-fluid-harrow mr-4" src="{% static 'img/Harrogate.jpg' %}" alt="Home Harrogate fair" />
+
+
+              <div class="col-md-4 mb-5 text-center py-3 d-flex flex-column justify-content-center">
+                <div class="text-content">
+                  <h3>Our first ever Art Fair at Harrogate in March 2025!</h3>
+                  <p class="p-home text-center py-3 d-flex flex-column justify-content-center">Venue : Great Yorkshire
+                    Showground, Harrogate, HG2 8NZ </p>
+                  <p class="p-home text-center py-3 d-flex flex-column justify-content-center">Date: 7th -9th March 2025
+                  </p>
+                  <a href="{% url 'visit' %}"><button type="submit" class="btn btn-primary btn-sm px-4 my-2">Buy
+                      Tickets</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Home end  -->
+
+  {% endblock %}

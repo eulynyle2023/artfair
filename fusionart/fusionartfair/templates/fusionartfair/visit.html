@@ -1,0 +1,232 @@
+{% extends 'fusionartfair/base.html' %}
+{% load static %} <!-- Load static files -->
+
+
+{% block title %}
+Courses
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}" type="text/css">
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Courses section Start -->
+<!-- Header Start -->
+
+<div class="banner-section-visit pt-5 pb-5 bg-primary">
+    <div class="container-fluid px-md-5 mb-0">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left"> </div>
+            <div class="col-lg-6 text-center">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container-fluid bg-primary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h3 class="font-weight-bold text-white">Courses</h3>
+    </div>
+</div> -->
+<!-- Header End -->
+
+<!-- Courses Start -->
+<!-- <div class="form-container">
+    <form method="get" action="{% url 'visit' %}" class="search-form">
+        <input type="text" name="search" placeholder="Search courses..." value="{{ request.GET.search }}" autocomplete="off">
+        <button type="submit">Search</button>
+        <button type="button" onclick="window.location.href='{% url 'visit' %}';" style="padding: 8px 15px; background-color: black; color: white; border: none; cursor: pointer;">Reset</button>
+    </form>
+</div> -->
+
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <div class="welcome-text-container text-center py-3">
+                <h1>Welcome to Fusion Art Fair</h1>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="1000">
+                <p class="p-home">
+                    This event brings together a diverse range of artists, galleries, collectors, and art enthusiasts.
+                    As you explore the fair, you'll see a diverse mix of contemporary, modern, and traditional artworks
+                    covering various mediums including
+                    painting, sculpture, photography, mixed media, and more.
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2" data-aos="fade-up" data-aos-duration="2000">
+            <p class="section-title px-5">
+                <span class="px-2">March, 2025</span>
+            </p>
+            <h1 class="mb-4">Harrogate</h1>
+        </div>
+        <div class="row ">
+
+            <div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-duration="2000">
+                <div class="card border-0 bg-light shadow-sm pb-4">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">When</h4>
+                        <img class="img-fluid-visit" src="{% static 'img/harrow5.jpg' %}" alt="Home Harrogate fair" />
+
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5">
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Friday 7th March 2025 </strong>
+                            </div>
+                            <div class="col-6 py-1">18:00 pm- 21:00 pm </div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Saturday 8th March 2025 </strong>
+                            </div>
+                            <div class="col-6 py-1">10:00 am - 18:00 pm</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Sunday 9th March 2025</strong>
+                            </div>
+                            <div class="col-6 py-1">10:00 am - 17:00 pm</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-duration="2000">
+                <div class="card border-0 bg-light shadow-sm pb-4">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Where</h4>
+                        <img class="img-fluid-visit" src="{% static 'img/harrow6.jpg' %}" alt="Home Harrogate fair" />
+
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5">
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Address</strong>
+                            </div>
+                            <div class="col-6 py-1">Great Yorkshire Showground,</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>City</strong>
+                            </div>
+                            <div class="col-6 py-1">Harrogate</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Postcode</strong>
+                            </div>
+                            <div class="col-6 py-1"> HG2 8NZ</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-duration="2000">
+                <div class="card border-0 bg-light shadow-sm pb-4">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Tickets</h4>
+                        <img class="img-fluid-visit" src="{% static 'img/harrow7.jpg' %}" alt="Home Harrogate fair" />
+
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5">
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Private View - Advance</strong>
+                            </div>
+                            <div class="col-6 py-1"> £12 in Advance (Single)</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Private View - On the Door</strong>
+                            </div>
+                            <div class="col-6 py-1">£15 (Single) </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Weekend Ticket</strong>
+                            </div>
+                            <div class="col-6 py-1">£8 in Advance/concessions (Single)</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right">
+                                <strong>Weekend Ticket - on the door</strong>
+                            </div>
+                            <div class="col-6 py-1">£10 (Single)</div>
+                        </div>
+                        <div class="row">
+                            <p></p>
+                            <p class="p-home">Return as you wish through the weekend</p>
+                        </div>
+                        <div class="row">
+
+                            <p class="p-home">Children under 16 admitted for free all weekend</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- Pagination Links -->
+        <!-- <div class="d-flex justify-content-center mt-5">
+            <ul class="pagination">
+                {% if courses.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?search={{ request.GET.search }}&page=1">&laquo; First</a></li>
+                    <li class="page-item"><a class="page-link" href="?search={{ request.GET.search }}&page={{ courses.previous_page_number }}">Previous</a></li>
+                {% endif %}
+
+                {% for num in courses.paginator.page_range %}
+                    {% if courses.number == num %}
+                        <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?search={{ request.GET.search }}&page={{ num }}">{{ num }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if courses.has_next %}
+                    <li class="page-item"><a class="page-link" href="?search={{ request.GET.search }}&page={{ courses.next_page_number }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?search={{ request.GET.search }}&page={{ courses.paginator.num_pages }}">Last &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </div> -->
+    </div>
+</div>
+
+
+
+
+{% endblock %}
